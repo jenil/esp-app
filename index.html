@@ -15,12 +15,10 @@
         <script type="text/javascript">
             $(function(){
 	            $('#get').click(function(){
-		            $.getJSON('http://esperanto:8/home/json', function(data) {
-		            
-								 document.title = data.data.title;
+		            $.getJSON('http://esperanto:8/home/json?callback=?', function(data) {
 								 
 								  $('<p/>', {
-								    html: data.data.title + data.data.content
+								    html: data.title + data.content
 								  }).appendTo('body');
 								  
 								});
